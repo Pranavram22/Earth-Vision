@@ -1,0 +1,107 @@
+* General Botpress Widget Styles */
+#botpress-webchat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  background-color: #4CAF50; /* Customize background color */
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+
+#botpress-webchat:hover {
+  background-color: #45a049;
+  cursor: pointer;
+}
+
+/* Chat Window */
+#botpress-webchat-container {
+  width: 350px;
+  height: 500px;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: none; /* Hide initially */
+}
+
+#botpress-webchat-container.active {
+  display: block; /* Show when active */
+}
+
+/* Chat Header */
+#botpress-webchat .bp-header {
+  background-color: #4CAF50; /* Header background */
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Chat Messages */
+#botpress-webchat .bp-message {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+#botpress-webchat .bp-message-user {
+  background-color: #e0f7fa;
+  color: #00796b;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#botpress-webchat .bp-message-bot {
+  background-color: #f1f1f1;
+  color: #333;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* Input Area */
+#botpress-webchat .bp-input {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: calc(100% - 22px); /* Adjust for padding */
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#botpress-webchat .bp-send-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#botpress-webchat .bp-send-button:hover {
+  background-color: #45a049;
+}
+
+/* Customize scrollbar */
+#botpress-webchat .bp-message-container {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #4CAF50 transparent;
+}
+
+#botpress-webchat .bp-message-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#botpress-webchat .bp-message-container::-webkit-scrollbar-thumb {
+  background-color: #4CAF50;
+  border-radius: 5px;
+}

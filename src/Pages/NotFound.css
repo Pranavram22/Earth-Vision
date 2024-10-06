@@ -1,0 +1,74 @@
+/* Ensure the entire container takes up the full page */
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 800px; /* Increased the max-width for better visibility */
+  display: flex;
+  justify-content: center;
+  position: relative; /* Needed to position the text */
+}
+
+.background-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(0.8);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Position the content in the center of the video */
+.content {
+  position: absolute;
+  top: 50%; /* Center the text vertically */
+  left: 50%; /* Center the text horizontally */
+  transform: translate(-50%, -50%); /* Offset by half the width and height */
+  text-align: center;
+  width: 100%;
+  color: white;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.title {
+  font-size: 2rem; /* Reduced font size to fit better */
+  font-weight: bold;
+  margin-bottom: 5px;
+  animation: textGlow 1.5s ease-in-out infinite;
+}
+
+.description {
+  font-size: 1rem; /* Slightly smaller font size */
+  animation: textFadeIn 2s ease-in-out;
+}
+
+/* Animation for the glowing text effect */
+@keyframes textGlow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+      0 0 20px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1),
+      0 0 30px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Simple fade-in for description */
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

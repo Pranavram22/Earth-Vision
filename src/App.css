@@ -1,0 +1,23 @@
+/* Make the app-container take full viewport height */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Make content take remaining space and push footer down */
+.content {
+  flex-grow: 1;
+  padding: 20px; /* Optional padding */
+}
+
+/* Style the footer to stay at the bottom */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+/* Optional: Add some spacing between the footer and the content */

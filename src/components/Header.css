@@ -1,0 +1,118 @@
+/* Add transitions and animations for smooth effects */
+
+/* Container for the entire header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000;
+  border-top: 3px solid #1a75ff;
+  height: 80px;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease, box-shadow 0.3s ease;
+}
+
+/* Logo styles with subtle animation */
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.logo-icon {
+  margin-top: 10px;
+  height: 80px;
+  transition: transform 0.3s ease;
+}
+
+.logo-text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.logo-text:hover {
+  color: #1a75ff; /* Change color on hover */
+}
+
+/* Navigation links with hover effect */
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-right: 60px;
+  border-bottom: 3px solid transparent; /* Default state - no underline */
+}
+
+/* Underline the active page link */
+.nav-links a.active {
+  border-bottom: 3px solid #1a75ff; /* Underline the active link */
+}
+
+.nav-links a:hover {
+  color: #1a75ff; /* Blue color on hover */
+  transform: translateY(-5px); /* Float up effect on hover */
+}
+
+/* Login button with animation */
+.login-btn a {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  margin-right: 80px;
+}
+
+.login-btn a:hover {
+  background-color: #1a75ff; /* Change background color on hover */
+  color: white;
+  transform: translateY(-3px); /* Float up effect */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+
+  .login-btn a {
+    padding: 8px 15px;
+  }
+}
